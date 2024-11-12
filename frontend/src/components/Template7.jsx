@@ -23,7 +23,9 @@ const Template7 = ({ formData = {} }) => {
             ProgrammingLanguages: ['JavaScript', 'Python', 'C++'],
             WebTechnologies: ['React', 'Node.js', 'CSS'],
             ToolsandFrameworks: ['Docker', 'Git', 'Kubernetes'],
-            Databases: ['MySQL', 'MongoDB']
+            Databases: ['MySQL', 'MongoDB'],
+            AreasOfInterest: ['Artificial Intelligence', 'Cloud Computing'],
+        LeadershipQualities: ['Led a team of 5', 'Organized internal tech talks']
         },
         Experience: [
             { Position: 'Senior Developer', Company: 'Tech Innovators', Dates: '2020 - Present', Location: 'Remote', Description: 'Leading a team to build high-performing applications' }
@@ -32,11 +34,9 @@ const Template7 = ({ formData = {} }) => {
             { ProjectName: 'Personal Portfolio', Description: 'A website to showcase my projects and experience' }
         ],
         Certifications: ['Certified ScrumMaster', 'AWS Certified Developer'],
-        Languages: ['English', 'Spanish'],
+        Languages: ['English', 'Tamil'],
         Hobbies: ['Traveling', 'Photography'],
         Achievements: ['Won 2021 Innovation Award', 'Spoke at Tech Conference'],
-        AreasOfInterest: ['Artificial Intelligence', 'Data Science'],
-        LeadershipQualities: ['Led team of 5 developers', 'Organized coding workshops']
     };
 
     const combinedData = { ...defaultData, ...formData };
@@ -123,8 +123,8 @@ const Template7 = ({ formData = {} }) => {
                 {renderSection('Languages', combinedData.Languages)}
                 {renderSection('Hobbies', combinedData.Hobbies)}
                 {renderSection('Achievements', combinedData.Achievements)}
-                {renderSection('Areas of Interest', combinedData.AreasOfInterest)}
-                {renderSection('Leadership Qualities', combinedData.LeadershipQualities)}
+                {renderSection('Skills', [{ 'Areas of Interest': safeJoin(combinedData.Skills.AreasOfInterest) },
+                { 'Leadership Qualities': safeJoin(combinedData.Skills.LeadershipQualities) }])}
 
                 <button className="pdf-download-button" onClick={generatePDF}>Download as PDF</button>
             </div>
