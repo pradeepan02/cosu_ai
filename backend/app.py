@@ -9,13 +9,13 @@ from groq import Groq
 sys.path.insert(0, os.path.abspath(os.getcwd()))
 
 # Initialize Flask
-flask_app = Flask(__name__)
-CORS(flask_app)  # Enable CORS for all routes
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 client = Groq(
     api_key="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"
 )
 # Flask Routes for File Upload and Parsing
-@flask_app.route('/process', methods=['POST'])
+@app.route('/process', methods=['POST'])
 def ats():
     doc = request.files['pdf_doc']
 
@@ -39,7 +39,7 @@ def _read_file_from_memory(file):
         data += page.extract_text() or ""  # Avoid NoneType errors if text is missing
     return data
 
-@flask_app.route('/generate_cover_letter', methods=['POST'])
+@app.route('/generate_cover_letter', methods=['POST'])
 def cover_letter():
     doc = request.files['resume']  # Get resume file from the request
 
@@ -150,5 +150,5 @@ def generate_cover_letter(applicant_name, company_name, position, company_addres
 
 # Run the application
 if __name__ == "__main__":
-    flask_app.run(port=7000, debug=True)
+    app.run(port=7000, debug=True)
 
