@@ -8,7 +8,7 @@ const UserStats = () => {
     useEffect(() => {
         const fetchUserCount = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/user-count');
+                const response = await axios.get('https://cosu-ai-backend.onrender.com/user-count');
                 setUserCount(response.data.count); // Adjust according to your backend response structure
                 console.log('Response data:', response.data);
             } catch (error) {
