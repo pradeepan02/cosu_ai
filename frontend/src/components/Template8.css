@@ -1,0 +1,148 @@
+/* Resume Container */
+#resume-template-8 .container {
+    width: 100%;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    padding: 30mm; /* Generous padding for a spacious layout */
+    background-color: #ffffff; /* Pure white background */
+    font-family: 'Helvetica Neue', sans-serif; /* Clean and modern font */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted look */
+    border-radius: 10px; /* Slightly rounded corners for a modern feel */
+}
+
+/* Header */
+#resume-template-8 .header {
+    text-align: center; /* Center align the header */
+    margin-bottom: 40px; /* Increased margin for spacing */
+}
+
+/* Contact Info */
+#resume-template-8 .contact-info {
+    text-align: center; /* Center-align contact info */
+    font-size: 16px; /* Font size for better readability */
+    margin-top: 5px; /* Space above contact info */
+}
+
+#resume-template-8 .contact-info p {
+    margin: 3px 0; /* Reduced margin for better spacing */
+}
+
+#resume-template-8 .name {
+    font-size: 36px; /* Larger font size for name */
+    font-weight: bold;
+    color: #333; /* Dark gray color for name */
+    margin: 0;
+}
+
+#resume-template-8 .details {
+    font-size: 20px; /* Font size for details */
+    color: #777; /* Gray color for career level */
+    margin: 5px 0;
+}
+
+/* Links styling */
+#resume-template-8 .link {
+    color: #007aff; /* Blue color for links (Apple blue) */
+    text-decoration: none;
+    font-size: 14px; /* Font size for links */
+}
+
+#resume-template-8 .link:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Sections */
+#resume-template-8 .section {
+    margin-bottom: 30px; /* Increased margin between sections */
+}
+
+#resume-template-8 .section-heading {
+    font-size: 26px; /* Font size for section headings */
+    font-weight: bold;
+    color: #333; /* Dark gray color for section headings */
+    margin-bottom: 10px; /* Space below the heading */
+    border-bottom: 2px solid #dcdcdc; /* Light gray divider */
+    padding-bottom: 5px; /* Padding for better spacing */
+}
+
+/* Paragraphs */
+#resume-template-8 .section-paragraph {
+    margin: 8px 0; /* Increased margin for paragraphs */
+    line-height: 1.7; /* Better line spacing for readability */
+    color: #555; /* Darker gray for paragraph text */
+}
+
+/* Table Styles */
+#resume-template-8 .section-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#resume-template-8 .section-table th, 
+#resume-template-8 .section-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* List Styles */
+#resume-template-8 .section-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#resume-template-8 .section-list .section-paragraph {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* PDF Download Button */
+#resume-template-8 .pdf-download-button {
+    background-color: #007aff; /* Apple blue for button */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded button */
+    padding: 12px 25px; /* Generous padding */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer;
+    margin-top: 30px; /* Increased margin above button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+#resume-template-8 .pdf-download-button:hover {
+    background-color: #0051a8; /* Darker hover effect for button */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Additional Styles for Consistency */
+#resume-template-8 .section {
+    margin-bottom: 20px;
+}
+
+#resume-template-8 .section-heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#resume-template-8 .section-paragraph {
+    margin: 8px 0;
+}
+
+/* Override Button Styles if Needed */
+#resume-template-8 .pdf-download-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #3498db; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#resume-template-8 .pdf-download-button:hover {
+    background-color: #2980b9;
+}

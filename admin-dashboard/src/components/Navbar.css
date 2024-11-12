@@ -1,0 +1,51 @@
+/* Navbar.css */
+nav {
+    width: 100%; /* Full width */
+    background-color: #1a1a1a; /* Dark background for navbar */
+    padding: 10px 20px; /* Padding around navbar */
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+}
+
+nav h1 {
+    margin: 0; /* Remove default margin */
+    color: #00bfff; /* Bright blue for title */
+}
+
+nav ul {
+    list-style: none; /* Remove list style */
+    display: flex; /* Flex layout for links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    margin: 0 15px; /* Space between links */
+}
+
+nav a {
+    color: #e0e0e0; /* Light text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #00bfff; /* Bright blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    nav li {
+        margin: 5px 0; /* Adjust spacing for vertical layout */
+    }
+}

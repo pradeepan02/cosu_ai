@@ -1,0 +1,117 @@
+/* Center container styles */
+#contactPage {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align horizontally */
+    background-color: #000; /* Black background for the entire page */
+    color: #e0e0e0; /* Light text color to contrast with black */
+    padding: 40px 0; /* Padding at the top and bottom */
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* General container styles */
+#contactPage .pageContainer {
+    background-color: #111; /* Slightly lighter black for contrast */
+    color: #e0e0e0; /* Light text color */
+    padding: 40px 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    max-width: 800px; /* Max width for content */
+    width: 100%; /* Responsive width */
+}
+
+/* Heading styles */
+#contactPage h1 {
+    font-size: 2rem; /* Adjusted heading font size */
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #00bfff; /* Primary color for the heading */
+    text-align: center; /* Center the heading text */
+    align-self: flex-start; /* Position the heading at the top of the content */
+    width: 100%; /* Full width for heading alignment */
+    padding-left: 20px; /* Add padding for spacing from the left */
+}
+
+/* Paragraph styles */
+#contactPage p {
+    font-size: 1.5rem; /* Adjusted paragraph font size */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #cccccc; /* Muted text color for paragraph */
+    margin-bottom: 20px;
+    text-align: center; /* Center align paragraphs */
+}
+
+/* Form container styles */
+#contactPage .contactForm {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Column direction for form items */
+    background-color: #222; /* Darker form background for contrast */
+    padding: 20px; /* Padding inside form */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+#contactPage .formGroup {
+    margin-bottom: 15px;
+}
+
+#contactPage .formGroup label {
+    margin-bottom: 5px;
+    color: #00bfff; /* Label color */
+    font-size: 1.2rem; /* Adjusted font size */
+}
+
+#contactPage input,
+#contactPage textarea {
+    padding: 12px; /* Padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000;
+    color: #333333;
+    width: 100%; /* Full width */
+    font-size: 1rem; /* Increased input font size */
+}
+
+/* Adjusted text area */
+#contactPage textarea {
+    height: 120px; /* Adjusted height for text area */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Input focus styles */
+#contactPage input:focus,
+#contactPage textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Submit button styles */
+#contactPage .submitButton {
+    padding: 12px;
+    background-color: #007b ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Adjusted font size */
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Submit button hover styles */
+#contactPage .submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+#contactPage .footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #000;
+}
+
+/* Footer paragraph styles */

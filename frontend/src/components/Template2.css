@@ -1,0 +1,98 @@
+/* Container for the entire resume */
+#resume-template-2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-width: 210mm; /* A4 width */
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header section */
+#resume-template-2 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#resume-template-2 .header .contact-info {
+    text-align: left;
+}
+
+#resume-template-2 .header .contact-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#resume-template-2 .header .contact-info .name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+}
+
+#resume-template-2 .header .contact-info .title {
+    font-size: 16px;
+    color: #666;
+}
+
+#resume-template-2 .header .contact-info .linkedin,
+#resume-template-2 .header .contact-info .github {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Section Heading Styles */
+#resume-template-2 .section-heading {
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* Key achievements and project tables */
+#resume-template-2 .project-item,
+#resume-template-2 .achievement-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#resume-template-2 .project-item strong,
+#resume-template-2 .achievement-item strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Skills table styling */
+#resume-template-2 .skills-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resume-template-2 .skills-container th,
+#resume-template-2 .skills-container td {
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Minimalistic Button Styling */
+#resume-template-2 .pdf-download-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #3367d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#resume-template-2 .pdf-download-button:hover {
+    background-color: #1a56d6;
+}

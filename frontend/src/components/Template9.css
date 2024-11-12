@@ -1,0 +1,103 @@
+/* Global styles for the resume container */
+#resume-template-9 .resume-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Softer light background for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content area */
+#resume-template-9 .container {
+    background-color: #ffffff; /* White background for the resume */
+    padding: 30px;
+    border-radius: 10px;
+    position: relative; /* For positioning inner elements */
+}
+
+/* Header styling */
+#resume-template-9 .header {
+    text-align: center;
+    border-bottom: 3px solid #007bff; /* Thicker blue border for the header */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+#resume-template-9 .contact-info {
+    margin-bottom: 30px;
+}
+
+#resume-template-9 .name {
+    font-size: 28px; /* Larger font size for the name */
+    font-weight: bold;
+    color: #333; /* Darker text for name */
+    margin: 0;
+}
+
+#resume-template-9 .details {
+    font-size: 18px;
+    font-style: italic; /* Italics for career level */
+    color: #555; /* Medium gray color */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+#resume-template-9 .link {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+#resume-template-9 .link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Section styles */
+#resume-template-9 .section {
+    margin-bottom: 30px;
+    padding: 15px; /* Padding inside sections */
+    background: #f9f9f9; /* Light background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#resume-template-9 .section-heading {
+    font-size: 22px; /* Slightly larger section headings */
+    font-weight: bold;
+    color: #007bff; /* Blue heading for sections */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff; /* Underline effect for headings */
+    padding-bottom: 5px; /* Padding for heading */
+}
+
+#resume-template-9 .section-paragraph {
+    font-size: 16px;
+    line-height: 1.6; /* Increased line height for readability */
+    color: #444; /* Dark gray for paragraph text */
+    margin: 5px 0; /* Margin for spacing between paragraphs */
+}
+
+/* Divider styling */
+#resume-template-9 .resume-divider {
+    height: 3px;
+    margin: 30px 0; /* Increased margin for spacing */
+}
+
+/* Button styling */
+#resume-template-9 .pdf-download-button {
+    background-color: #007bff; /* Blue background for button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px; /* Increased padding for the button */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transitions for button */
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px; /* Margin for top spacing */
+}
+
+#resume-template-9 .pdf-download-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}

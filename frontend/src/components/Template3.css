@@ -1,0 +1,110 @@
+/* Template3.css - Amazon-style Resume Template */
+
+#resume-template-3 .container {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 15mm;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+#resume-template-3 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#resume-template-3 .contact-info {
+    text-align: left;
+}
+
+#resume-template-3 .name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #232f3e; /* Amazon dark gray */
+    margin: 0;
+}
+
+#resume-template-3 .details {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+#resume-template-3 .link {
+    color: #ff9900; /* Amazon orange */
+    text-decoration: none;
+}
+
+#resume-template-3 .link:hover {
+    text-decoration: underline;
+}
+
+#resume-template-3 .resume-divider {
+    border-top: 2px solid #232f3e;
+    margin: 15px 0;
+}
+
+#resume-template-3 .section {
+    margin-bottom: 18px;
+}
+
+#resume-template-3 .section-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #232f3e;
+    margin-bottom: 8px;
+    border-left: 3px solid #ff9900;
+    padding-left: 8px;
+}
+
+#resume-template-3 .table-container {
+    margin: 10px 0;
+}
+
+#resume-template-3 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resume-template-3 th, #resume-template-3 td {
+    border: 1px solid #dddddd;
+    padding: 6px;
+    text-align: left;
+}
+
+#resume-template-3 th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+#resume-template-3 .row-even {
+    background-color: #f9f9f9;
+}
+
+#resume-template-3 .section-paragraph {
+    margin: 4px 0;
+    line-height: 1.6;
+}
+
+#resume-template-3 .bold-text {
+    font-weight: bold;
+}
+
+#resume-template-3 .pdf-download-button {
+    background-color: #232f3e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#resume-template-3 .pdf-download-button:hover {
+    background-color: #1e2532;
+}

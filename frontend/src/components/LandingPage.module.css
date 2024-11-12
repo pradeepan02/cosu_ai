@@ -1,0 +1,282 @@
+.LandingPage {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #e0e0e0; /* Light text */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column; /* Flex direction to stack navbar and content */
+    align-items: center;
+    background-color: #000; /* Black background */
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Full height */
+    justify-content: flex-start; /* Align content at the top */
+    min-height: 100vh; /* Full height for centering */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh; /* Adjust height for the hero section */
+    background: url('/path/to/hero-image.jpg') no-repeat center center/cover; /* Hero image */
+    color: #fff; /* White text */
+    background-color: #000; /* Black background */
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s; /* Fade-in animation for hero */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.ctaContainer {
+    margin-top: 20px; /* Spacing above buttons */
+    
+}
+
+.startButton, .learnMoreButton {
+    background-color: #00bfff; /* Bright blue button */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
+    margin: 10px; /* Margin around buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.startButton:hover, .learnMoreButton:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.features {
+    display: flex;
+    flex-direction: column; /* Column layout for features */
+    align-items: center; /* Center align */
+    padding: 40px 20px; /* Padding adjustments */
+    background-color: #222; /* Dark background for features section */
+    width: 100vw;
+    animation: slideIn 0.8s; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.featureList {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of feature items */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Gap between feature items */
+}
+
+.featureItem {
+    background-color: #333; /* Dark background for feature items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for items */
+    width: 200px; /* Fixed width for feature items */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.featureIcon {
+    width: 50px; /* Icon width */
+    margin-bottom: 10px; /* Space below icons */
+}
+
+.featureItem:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.clientLogosSection {
+    padding: 40px 20px; /* Padding adjustments */
+    background-color: #1a1a1a; /* Darker background for logos section */
+    width: 100%; /* Full width */
+}
+
+.clientLogos {
+    display: flex;
+    justify-content: center; /* Center logos */
+    gap: 30px; /* Spacing between logos */
+    margin: 20px 0; /* Margin above and below */
+}
+
+.clientLogos img {
+    height: 50px; /* Adjust logo height */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.clientLogos img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.testimonials {
+    padding: 40px 20px; /* Padding adjustments */
+    background-color: #333; /* Dark background for testimonials */
+    width: 100%; /* Full width */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+}
+
+.testimonialCarousel {
+    display: flex;
+    flex-direction: column; /* Column layout for testimonials */
+    align-items: center; /* Center align */
+}
+
+blockquote {
+    background-color: #444; /* Darker background for quotes */
+    border-left: 5px solid #00bfff; /* Highlight border */
+    padding: 20px; /* Padding for quotes */
+    margin: 25px 0; /* Margin above and below */
+    border-radius: 5px; /* Rounded corners */
+    animation: fadeIn 0.8s; /* Fade-in effect */
+}
+
+.faqContainer {
+    margin: 20px 0; /* Margin above and below FAQs */
+}
+
+.faqItem {
+    margin: 10px 0; /* Space between FAQ items */
+    background: #444; /* Dark background for FAQ items */
+    padding: 15px; /* Padding for FAQ items */
+    border-radius: 8px; /* Rounded corners */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.faqItem:hover {
+    background: #555; /* Darker background on hover */
+}
+
+.newsletter {
+    padding: 40px 20px; /* Padding adjustments */
+    background-color: #222; /* Dark background for newsletter */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+}
+
+.emailInput {
+    padding: 10px; /* Padding for input */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    margin-right: 10px; /* Margin to the right */
+    width: 250px; /* Width of the input field */
+}
+
+.subscribeButton {
+    background-color: #00bfff; /* Bright blue button */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.subscribeButton:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.footer {
+    padding: 20px; /* Padding for footer */
+    background-color: #1a1a1a; /* Darker background for footer */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+}
+
+.footer p {
+    margin: 0; /* No margin for footer text */
+}
+
+.helpfulForSection {
+    display: flex;
+    flex-direction: column; /* Column layout for helpful section */
+    align-items: center; /* Center align */
+    padding: 40px 20px; /* Padding adjustments */
+    background-color: #222; /* Dark background for helpful section */
+    width: 100%; /* Full width */
+}
+
+.helpfulForList {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of helpful items */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Gap between helpful items */
+}
+
+.helpfulForItem {
+    background-color: #333; /* Dark background for helpful items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for items */
+    width: 200px; /* Fixed width for helpful items */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.helpfulForItem:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.blogSection {
+    padding: 40px 20px; /* Padding for blog section */
+    background-color: #1a1a1a; /* Darker background for blog */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+}
+
+.blogPosts {
+    display: flex;
+    flex-direction: column; /* Column layout for blog posts */
+    align-items: center; /* Center align */
+    gap: 20px; /* Gap between posts */
+}
+
+.blogPost {
+    background: #333; /* Dark background for blog posts */
+    padding: 15px; /* Padding for blog posts */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%; /* Full width for blog posts */
+    max-width: 400px; /* Max width for blog posts */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.blogPost:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.socialMedia {
+    padding: 40px 20px; /* Padding for social media section */
+    background-color: #222; /* Dark background for social media */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center; /* Center social links */
+    gap: 15px; /* Space between links */
+}
+
+.socialLinks a {
+    color: #00bfff; /* Bright blue for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.socialLinks a:hover {
+    color: #1e88e5; /* Darker blue on hover */
+}

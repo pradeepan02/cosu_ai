@@ -1,0 +1,117 @@
+/* Sidebar Styling */
+.sidebar {
+    width: 300px; /* Adjust width as needed */
+    background-color: #000; /* Dark navy for sidebar background */
+    color: white; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    position: fixed; /* Stick to the left side of the screen */
+    border-right: 5px solid #00bfff;
+    top: 0;
+    left: 0;
+    min-height: 100vh; /* Ensure it takes at least the viewport height */
+    height: auto; /* Allow it to expand beyond viewport if needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #00bfff; /* Bright blue for sidebar header */
+    margin: 0; /* Ensures no extra margin */
+}
+
+/* Steps Section */
+.sidebar-steps {
+    margin-top: 20px;
+    width: 100%; /* Step items fill the sidebar width */
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* Keep step items aligned properly */
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff; /* White background for circles */
+    color: #000; /* Orange color for text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 10px;
+    border: 2px solid #ffffff; /* Orange border for circles */
+    flex-shrink: 0; /* Prevent circle from shrinking */
+}
+
+.step-circle.active {
+    background-color: #ff6600; /* Active circle color */
+    color: white; /* White text on active circle */
+}
+
+.step-item.completed .step-circle {
+    background-color: #ff6600; /* Completed circle color */
+    color: white; /* White text for completed circle */
+}
+
+.step-item.completed .check-mark {
+    font-size: 18px; /* Size for completed check mark */
+}
+
+.step-item p {
+    color: white; /* White text for step item descriptions */
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1; /* Text takes up remaining space */
+}
+
+/* Progress Section */
+.sidebar-progress {
+    margin-top: 40px;
+    width: 100%; /* Align with sidebar width */
+}
+
+.sidebar-progress p {
+    margin: 0 0 10px;
+    color: white; /* White text for progress section */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #444; /* Dark gray for the progress bar background */
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #1a73e8; /* Bright blue for filled progress */
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+.step-item .check-mark {
+    font-size: 18px;
+    color: white; /* White color for check marks */
+}

@@ -1,0 +1,15 @@
+/* UserStats.css */
+.userStats {
+    background-color: #000; /* Dark background for stats section */
+    padding: 20px; /* Padding around stats */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%; /* Width of the stats container */
+    max-width: 600px; /* Max width */
+    color:#ffffff;
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below stats */
+}
+
+.userStats h2 {
+    color: #00bfff; /* Bright blue for user stats */
+}

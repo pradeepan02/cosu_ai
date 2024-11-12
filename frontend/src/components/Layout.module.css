@@ -1,0 +1,78 @@
+/* Layout.module.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #000; /* Optional background color for the layout */
+}
+
+.navbar {
+    width: 100vw; /* Full viewport width */
+    height: 50px;
+    background: linear-gradient(90deg, #000, #000);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left side */
+    z-index: 1000;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+    margin: 0; /* Remove any margin */
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #000, #000); /* Change gradient on hover */
+}
+
+.brand {
+    color: #ffffff; /* White text for the brand */
+    font-size: 1.8rem; /* Larger font size for brand */
+    font-weight: bold; /* Bold font weight */
+    cursor: pointer; /* Pointer cursor for brand */
+    padding-left: 20px; /* Left padding for spacing */
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    gap: 40px; /* Increased spacing between items */
+    height: 100%; /* Full height for alignment */
+    align-items: center; /* Vertically center nav items */
+}
+
+.navList li {
+    cursor: pointer;
+    color: #00bfff; /* Bright blue for nav items */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transition */
+    position: relative; /* Position for the pseudo-element */
+}
+
+.navList li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Underline thickness */
+    background: #00bfff; /* Underline color */
+    transition: width 0.3s ease; /* Smooth underline transition */
+    position: absolute;
+    bottom: -5px; /* Position under the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+}
+
+.navList li:hover {
+    color: #1e88e5; /* Darker blue on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.navList li:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* Additional styles for main content */
+.mainContent {
+    flex: 1; /* Allow main content to take available space */
+    padding: 20px; /* Padding for the main content */
+}

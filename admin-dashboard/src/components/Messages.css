@@ -1,0 +1,32 @@
+/* Messages.css */
+.messages {
+    padding: 20px; /* Padding around messages */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%; /* Width of the messages container */
+    max-width: 600px; /* Max width */
+    text-align: left; /* Align text to left */
+    margin-bottom: 20px; /* Space below messages section */
+}
+
+.messages h2 {
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.messages ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+}
+
+.messages li {
+    background: #000; /* Dark background for each message */
+    color:#ffffff;
+    padding: 10px; /* Padding for each message */
+    margin: 10px 0; /* Margin between messages */
+    border-radius: 5px; /* Rounded corners for messages */
+    transition: background 0.3s ease; /* Smooth background transition */
+    color: aliceblue;
+}
+
+.messages li:hover {
+    background: #000; /* Darker background on hover */
+}

@@ -1,0 +1,234 @@
+/* Main Page Background */
+.displayPageContainer {
+    background-color: #000; /* Black background */
+    color: #e0e0e0; /* Light text for contrast */
+    position: fixed;
+    height: 100vh; /* Ensure the container takes up the entire viewport height */
+    width:100vw;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+}
+
+/* Navbar Placeholder */
+.navbar {
+    width: 100%;
+    height: 50px; /* Adjust height as necessary */
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex; /* Enable flexbox layout */
+    justify-content: flex-end; /* Align content to the right */
+    padding-right: 20px; /* Optional padding for spacing from the edge */
+}
+
+/* Title below the navbar */
+.displayPageHeader {
+    padding: 50px;
+    color: #e0e0e0; /* Light gray for headers */
+    text-align: center;
+    margin-top: 100px; /* Adjust space below navbar */
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.displayPageSubHeader {
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 3.2rem;
+    font-size: 1.8rem;
+}
+
+.dynamicSection {
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    background-color: #000;
+}
+
+/* Form Sections */
+.formSection {
+    margin-bottom: 1rem;
+    background-color: #000;
+    color: #ffffff;
+}
+
+/* Inputs and Textareas */
+.displayPageInput,
+.displayPageTextarea {
+    width: 150%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 3px;
+    background-color: #444; /* Black background for inputs */
+    font-size: 1rem;
+    color: #ffffff; /* White text color */
+    transition: border-color 0.3s ease;
+}
+
+.displayPageInput:focus,
+.displayPageTextarea:focus {
+    border-color: #00bfff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.displayPageTextarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.displayPageLabel {
+    text-align: left;
+    margin-bottom: 7.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* Paragraphs */
+.displayPageParagraph {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.fieldRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.displayPageButton,
+.removeButton,
+.displayNextButton {
+    background-color: #00bfff;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.displayPageButton:hover,
+.removeButton:hover,
+.displayNextButton:hover {
+    background-color: #0093cc;
+}
+
+.removeButton {
+    background-color: #e74c3c;
+}
+
+.removeButton:hover {
+    background-color: #c0392b;
+}
+
+/* Dynamic Sections */
+.dynamicSection {
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+
+/* Add Sections */
+.addEducationSection,
+.addProjectSection,
+.addExperienceSection,
+.addAchievementSection,
+.addCertificationSection {
+    background-color: #ecf0f1;
+    border: 1px dashed #bdc3c7;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border-radius: 4px;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .displayPageContainer {
+        padding: 1rem;
+    }
+
+    .displayPageHeader {
+        font-size: 20rem;
+    }
+
+    .displayPageSubHeader {
+        font-size: 1.5rem;
+    }
+
+    .displayPageParagraph strong {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: center;
+}
+
+.displayPageContent {
+    overflow: hidden;
+    width: 80%;
+}
+
+.displayPageSection {
+    margin-bottom: 5px;
+}
+
+.displayPageNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.displayPageButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.displayPage {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.displayPageContent {
+    flex-grow: 1;
+    padding-left: 350px;
+}
+
+.inputElement {
+    margin-left: 100px;
+}

@@ -1,0 +1,129 @@
+/* Base container settings for the resume */
+#resume-template-4 .container {
+    width: 100%;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    padding: 20mm;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f0f4f8 100%);
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header layout and styling */
+#resume-template-4 .header {
+    display: flex;
+    justify-content: space-between; /* Use space-between to align items */
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: left; /* Changed to left for better alignment */
+}
+
+/* Contact information text */
+#resume-template-4 .contactInfo {
+    text-align: right; /* Align contact info to the right */
+}
+
+#resume-template-4 .contactInfo p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+#resume-template-4 .name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Link styling */
+#resume-template-4 .link {
+    color: #000; /* Changed from blue to black */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#resume-template-4 .link:hover {
+    color: #444; /* Slight hover effect using a lighter black */
+    text-decoration: underline;
+}
+
+/* Divider between sections */
+#resume-template-4 .resumeDivider {
+    border-top: 2px solid #444;
+    margin: 20px 0;
+    opacity: 0.7;
+}
+
+/* Section layout and title */
+#resume-template-4 .section {
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+#resume-template-4 .sectionHeading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    border-bottom: 2px solid #000; /* Changed from blue to black */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Career objective paragraph */
+#resume-template-4 .career-objective p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Table styles */
+#resume-template-4 .tableContainer {
+    overflow-x: auto;
+}
+
+#resume-template-4 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#resume-template-4 .tableHeader {
+    background-color: #f0f4f8;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+#resume-template-4 .tableCell {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#resume-template-4 .rowEven {
+    background-color: #f9f9f9; /* A light gray for even rows */
+}
+
+/* Button styles */
+#resume-template-4 .pdfDownloadButton {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#resume-template-4 .pdfDownloadButton:hover {
+    background-color: #004494; /* Darker shade for hover effect */
+    transition: background-color 0.3s ease;
+}

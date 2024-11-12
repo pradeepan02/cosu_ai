@@ -1,0 +1,85 @@
+/* Resume Container */
+#resume-template-5 .container {
+    width: 100%;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    padding: 20mm; /* Adjusted padding for Template 5 */
+    background-color: #ffffff; /* Pure white background */
+    font-family: 'Arial', sans-serif; /* Font family for Template 5 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a lifted effect */
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+/* Header */
+#resume-template-5 .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the start */
+    margin-bottom: 20px; /* Increased margin-bottom */
+}
+
+/* Contact Info */
+#resume-template-5 .contact-info {
+    text-align: left; /* Left-align contact info */
+    font-size: 16px; /* Font size for better readability */
+    margin-top: 10px; /* Space above contact info */
+}
+
+#resume-template-5 .contact-info p {
+    margin: 5px 0; /* Reduced margin for better spacing */
+}
+
+#resume-template-5 .name {
+    font-size: 30px; /* Larger font size for name */
+    font-weight: bold;
+    color: #003c71; /* Infosys dark blue for name */
+    margin: 0;
+}
+
+#resume-template-5 .details {
+    font-size: 18px; /* Larger font size for details */
+    color: #555; /* Slightly darker color for career level */
+    margin: 5px 0;
+}
+
+/* Resume Divider */
+#resume-template-5 .resume-divider {
+    margin: 20px 0; /* Increased margin for clearer division */
+    border-top: 2px solid #003c71; /* Dark blue divider */
+}
+
+/* Sections */
+#resume-template-5 .section {
+    margin-bottom: 20px; /* Increased margin between sections */
+}
+
+#resume-template-5 .section-heading {
+    font-size: 22px; /* Larger font size for section headings */
+    font-weight: bold;
+    color: #003c71; /* Infosys dark blue for section headings */
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+#resume-template-5 p {
+    margin: 8px 0; /* Increased margin for paragraphs */
+    line-height: 1.5; /* Better line spacing for readability */
+}
+
+/* PDF Download Button */
+#resume-template-5 .pdf-download-button {
+    background-color: #0072c6; /* Infosys blue for button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px; /* Increased padding */
+    font-size: 16px; /* Larger font size for the button */
+    cursor: pointer;
+    margin-top: 20px; /* Increased margin above button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for button */
+    transition: background-color 0.3s ease; /* Smooth transition effects */
+}
+
+#resume-template-5 .pdf-download-button:hover {
+    background-color: #005fa3; /* Darker hover effect for button */
+}
