@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'; // Import useContext here
+import React, { useContext, useState } from 'react';
 import styles from './CoverLetterPage.module.css';
 import Layout from './Layout';
-import { AuthContext } from './AuthContext'; // Ensure you import AuthContext
+import { AuthContext } from './AuthContext';
 
 function CoverLetterPage() {
-    const { isAuthenticated, setAuthMessage, authMessage } = useContext(AuthContext); // Using useContext to access AuthContext
+    const { isAuthenticated, setAuthMessage, authMessage } = useContext(AuthContext);
     const [coverLetter, setCoverLetter] = useState('');
     const [resumeFile, setResumeFile] = useState(null);
     const [applicantName, setApplicantName] = useState('');
@@ -12,6 +12,7 @@ function CoverLetterPage() {
     const [position, setPosition] = useState('');
     const [companyAddress, setCompanyAddress] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
     const handleGenerateCoverLetter = async () => {
@@ -21,7 +22,7 @@ function CoverLetterPage() {
         formData.append('companyName', companyName);
         formData.append('position', position);
         formData.append('companyAddress', companyAddress);
-        
+
         if (isAuthenticated) {
             try {
                 const response = await fetch('https://cosu-ai-flask.onrender.com/generate_cover_letter', {
@@ -34,17 +35,17 @@ function CoverLetterPage() {
                 console.error('Error generating the cover letter!', error);
             }
         } else {
-            setAuthMessage("Please sign in to generate a cover letter."); // Set auth message
-            toggleModal(); // Open modal
+            setAuthMessage("Please sign in to generate a cover letter.");
+            toggleModal();
         }
     };
 
     return (
         <Layout>
-            <div className={styles.pageContainer}>
-                <h1 className={styles.pageTitle}>Cover Letter Generator</h1> {/* Added Title */}
-                <div className={styles.splitContainer}>
-                    <div className={styles.inputContainer}>
+            <div id="pageContainer" className={styles.pageContainer}>
+                <h1 id="pageTitle" className={styles.pageTitle}>Cover Letter Generator</h1>
+                <div id="splitContainer" className={styles.splitContainer}>
+                    <div id="inputContainer" className={styles.inputContainer}>
                         <h2>Generate Cover Letter</h2>
                         <form>
                             <label htmlFor="resume">Resume File</label>
@@ -91,7 +92,11 @@ function CoverLetterPage() {
                             </button>
                         </form>
                     </div>
-                    <div className={styles.coverLetterContainer} style={{ opacity: coverLetter ? 1 : 0, transition: 'opacity 0.5s ease' }}>
+                    <div
+                        id="coverLetterContainer"
+                        className={styles.coverLetterContainer}
+                        style={{ opacity: coverLetter ? 1 : 0 }}
+                    >
                         {coverLetter && (
                             <>
                                 <h3>Generated Cover Letter:</h3>
