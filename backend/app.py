@@ -15,6 +15,9 @@ UPLOAD_PATH = "__DATA__"  # Ensure this path exists
 flask_app = Flask(__name__)
 CORS(flask_app)  # Enable CORS for all routes
 
+@flask_app.route('/')
+def home():
+    return "Welcome to the resume parser and cover letter generator!"
 # Flask Routes for File Upload and Parsing
 @flask_app.route('/process', methods=['POST'])
 def ats():
