@@ -29,7 +29,7 @@ function ContactPage() {
 
         if (isAuthenticated) {
             try {
-                const response = await fetch('http://localhost:8000/send_message', {
+                const response = await fetch('https://cosu-ai.onrender.com/send_message', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -35,7 +35,7 @@ const Charts = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/user-count-history');
+                const response = await axios.get('https://cosu-ai.onrender.com/user-count-history');
                 const data = response.data.data;
 
                 // Extract dates and counts

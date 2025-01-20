@@ -8,7 +8,7 @@ const Messages = () => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/messages');
+                const response = await axios.get('https://cosu-ai.onrender.com/messages');
                 setMessages(response.data);
             } catch (error) {
                 console.error('Error fetching messages:', error);

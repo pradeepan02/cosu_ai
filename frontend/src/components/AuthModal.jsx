@@ -25,7 +25,7 @@ function AuthModal({ isOpen, onClose }) {
             : { username: formData.username, email: formData.email, password: formData.password };
 
         try {
-            const response = await fetch(`http://localhost:8000${endpoint}`, {
+            const response = await fetch(`https://cosu-ai.onrender.com${endpoint}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(requestData),
