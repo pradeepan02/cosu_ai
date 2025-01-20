@@ -24,7 +24,7 @@ function CoverLetterPage() {
         
         if (isAuthenticated) {
             try {
-                const response = await fetch('http://localhost:7000/generate_cover_letter', {
+                const response = await fetch('https://cosu-ai-2.onrender.com/generate_cover_letter', {
                     method: 'POST',
                     body: formData,
                 });
