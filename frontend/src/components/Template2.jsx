@@ -21,9 +21,7 @@ const Template2 = ({ formData = {} }) => {
             ProgrammingLanguages: ["JavaScript", "Python", "Java"],
             WebTechnologies: ["React", "HTML", "CSS"],
             ToolsandFrameworks: ["Node.js", "Express", "Git"],
-            Databases: ["MySQL", "MongoDB"],
-            AreasOfInterest: ["Machine Learning", "Cybersecurity"],
-            LeadershipQualities: ["Team Lead at Example Corp", "Mentored junior developers"]
+            Databases: ["MySQL", "MongoDB"]
         },
         Experience: [
             { Company: "Example Corp", Role: "Software Developer", Duration: "2021 - Present", Description: "Developing web applications and APIs." }
@@ -32,10 +30,11 @@ const Template2 = ({ formData = {} }) => {
             { Title: "Portfolio Website", Description: "Personal portfolio built using React and hosted on GitHub Pages." }
         ],
         Certifications: ["Certified JavaScript Developer", "AWS Certified Solutions Architect"],
-        Languages: ["English", "Tamil"],
-        Hobbies: ["Reading", "Photography"],
+        Languages: ["English", "Spanish"],
+        Hobbies: ["Reading", "Hiking", "Photography"],
         Achievements: ["Top Scorer in Coding Competition", "Volunteer of the Year"],
-        
+        AreasOfInterest: ["Machine Learning", "Cybersecurity"],
+        LeadershipQualities: ["Team Lead at Example Corp", "Mentored junior developers"]
     };
 
     const combinedData = { ...defaultData, ...formData };
@@ -160,8 +159,8 @@ const Template2 = ({ formData = {} }) => {
                 {renderSection('Languages', combinedData.Languages)}
                 {renderSection('Hobbies', combinedData.Hobbies)}
                 {renderSection('Achievements', combinedData.Achievements)}
-                {renderSection('Skills', [{ 'Areas of Interest': safeJoin(combinedData.Skills.AreasOfInterest) },
-                { 'Leadership Qualities': safeJoin(combinedData.Skills.LeadershipQualities) }])}
+                {renderSection('Areas of Interest', combinedData.AreasOfInterest)}
+                {renderSection('Leadership Qualities', combinedData.LeadershipQualities)}
             </>
         );
     };

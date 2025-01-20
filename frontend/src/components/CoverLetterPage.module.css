@@ -1,21 +1,21 @@
-#pageContainer .pageContainer {
+.pageContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensure title and splitContainer stack vertically */
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000;
-    color: #e0e0e0;
+    background-color: #000; /* Black background */
+    color: #e0e0e0; /* Light text */
     font-family: 'Arial', sans-serif;
     overflow: hidden;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-#pageTitle .pageTitle {
-    font-size: 2rem;
-    color: #00bfff;
-    margin-bottom: 20px;
-    text-align: center;
+.pageTitle {
+    font-size: 2rem; /* Larger font for the title */
+    color: #00bfff; /* Color for the title */
+    margin-bottom: 20px; /* Space between title and content */
+    text-align: center; /* Center-align the title */
 }
 
 @keyframes fadeIn {
@@ -27,13 +27,13 @@
     }
 }
 
-#splitContainer .splitContainer {
-    display: flex;
-    flex-direction: row;
+.splitContainer {
+    display: flex; /* Horizontal layout */
+    flex-direction: row; /* Row layout */
     justify-content: center;
-    align-items: stretch;
+    align-items: stretch; /* Stretch items to the same height */
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Adjusted max-width */
     opacity: 0;
     transform: translateY(100px);
     animation: slideUp 0.5s ease-out forwards;
@@ -46,50 +46,51 @@
     }
 }
 
-#inputContainer .inputContainer {
+.inputContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center align the contents */
     gap: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Limit input container width */
     padding: 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     text-align: center;
-    flex: 1;
+    flex: 1; /* Allow input container to grow */
 }
 
-#inputContainer .inputContainer:hover {
+.inputContainer:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
-#inputContainer h2 {
+h2 {
     font-size: 1.8rem;
     color: #00bfff;
     margin-bottom: 20px;
 }
 
-#inputContainer form {
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center align the form content */
     width: 100%;
     gap: 15px;
 }
 
-#inputContainer label {
+/* Label styling */
+label {
     font-size: 1rem;
     color: #e0e0e0;
-    text-align: center;
+    text-align: center; /* Center-align label text */
     width: 100%;
 }
 
-#inputContainer input[type="file"],
-#inputContainer input[type="text"] {
+input[type="file"],
+input[type="text"] {
     width: 100%;
     padding: 10px;
     background-color: #2c2c2c;
@@ -98,7 +99,7 @@
     border-radius: 5px;
 }
 
-#inputContainer input[type="file"]::file-selector-button {
+input[type="file"]::file-selector-button {
     padding: 8px 15px;
     background-color: #1e88e5;
     color: #ffffff;
@@ -107,11 +108,11 @@
     cursor: pointer;
 }
 
-#inputContainer input[type="file"]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
     background-color: #1565c0;
 }
 
-#inputContainer .button {
+.button {
     width: 100%;
     padding: 10px;
     background-color: #1e88e5;
@@ -122,35 +123,35 @@
     border: none;
 }
 
-#inputContainer .button:hover {
+.button:hover {
     background-color: #1565c0;
     transform: scale(1.05);
 }
 
-#coverLetterContainer .coverLetterContainer {
-    margin-left: 20px;
+.coverLetterContainer {
+    margin-left: 20px; /* Space between input and cover letter */
     padding: 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     color: #e0e0e0;
-    width: 100%;
-    max-width: 400px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    flex: 1;
-    min-height: 300px;
+    width: 100%; /* Full width of the right section */
+    max-width: 400px; /* Limit cover letter container width */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    flex: 1; /* Allow cover letter container to grow */
+    min-height: 300px; /* Minimum height to ensure enough space */
 }
 
 @media (max-width: 768px) {
-    #splitContainer .splitContainer {
-        flex-direction: column;
+    .splitContainer {
+        flex-direction: column; /* Stack on smaller screens */
         max-width: 100%;
     }
-
-    #coverLetterContainer .coverLetterContainer {
-        margin-left: 0;
-        margin-top: 20px;
-        min-height: auto;
+    
+    .coverLetterContainer {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-top: 20px; /* Add top margin instead */
+        min-height: auto; /* Reset minimum height on small screens */
     }
 }

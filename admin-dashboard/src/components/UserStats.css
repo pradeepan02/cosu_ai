@@ -1,15 +1,65 @@
-/* UserStats.css */
+/* UserStats container */
 .userStats {
-    background-color: #000; /* Dark background for stats section */
-    padding: 20px; /* Padding around stats */
-    border-radius: 8px; /* Rounded corners */
-    width: 80%; /* Width of the stats container */
-    max-width: 600px; /* Max width */
-    color:#ffffff;
-    text-align: center; /* Center align text */
-    margin-bottom: 20px; /* Space below stats */
+    background: linear-gradient(145deg, #333, #666);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
+.userStats:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Header styling */
 .userStats h2 {
-    color: #00bfff; /* Bright blue for user stats */
+    color: #00bfff;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Count styling */
+.userStats p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .userStats {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .userStats h2 {
+        font-size: 1.4rem;
+    }
+
+    .userStats p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .userStats {
+        padding: 15px;
+    }
+
+    .userStats h2 {
+        font-size: 1.2rem;
+    }
+
+    .userStats p {
+        font-size: 2rem;
+    }
 }

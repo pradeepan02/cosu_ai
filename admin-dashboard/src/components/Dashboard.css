@@ -1,13 +1,16 @@
-/* Dashboard.css */
 .dashboardContainer {
+    padding: 30px;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align content at the top */
-    min-height: 100vh; /* Full height for centering */
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+    min-height: 100vh;
 }
 
 h1 {
-    margin: 20px 0; /* Margin for heading */
-    color: #00bfff; /* Bright blue for the dashboard title */
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
 }

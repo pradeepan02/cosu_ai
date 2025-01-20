@@ -21,9 +21,7 @@ const Template8 = ({ formData = {} }) => {
             ProgrammingLanguages: ['JavaScript', 'Python', 'Java'],
             WebTechnologies: ['React', 'Node.js', 'HTML', 'CSS'],
             ToolsandFrameworks: ['Docker', 'AWS', 'Git'],
-            Databases: ['MongoDB', 'SQL'],
-            AreasOfInterest: ['Artificial Intelligence', 'Cloud Computing'],
-        LeadershipQualities: ['Led a team of 5', 'Organized internal tech talks']
+            Databases: ['MongoDB', 'SQL']
         },
         Experience: [
             {
@@ -38,10 +36,11 @@ const Template8 = ({ formData = {} }) => {
             { ProjectName: 'E-commerce Platform', Description: 'Developed a scalable platform with React and Node.js.' }
         ],
         Certifications: ['AWS Certified Developer', 'Certified Java Programmer'],
-        Languages: ['English', 'Tamil'],
+        Languages: ['English', 'Spanish'],
         Hobbies: ['Reading', 'Hiking'],
         Achievements: ['Built a project with 10k+ users', 'Published 3 tech articles'],
-        
+        AreasOfInterest: ['Artificial Intelligence', 'Cloud Computing'],
+        LeadershipQualities: ['Led a team of 5', 'Organized internal tech talks']
     };
 
     const combinedData = { ...defaultData, ...formData };
@@ -160,8 +159,8 @@ const Template8 = ({ formData = {} }) => {
                 {renderSection('Languages', combinedData.Languages)}
                 {renderSection('Hobbies', combinedData.Hobbies)}
                 {renderSection('Achievements', combinedData.Achievements)}
-                {renderSection('Skills', [{ 'Areas of Interest': safeJoin(combinedData.Skills.AreasOfInterest) },
-                { 'Leadership Qualities': safeJoin(combinedData.Skills.LeadershipQualities) }])}
+                {renderSection('Areas of Interest', combinedData.AreasOfInterest)}
+                {renderSection('Leadership Qualities', combinedData.LeadershipQualities)}
 
                 <button className="pdf-download-button" onClick={generatePDF}>Download as PDF</button>
             </div>

@@ -3,15 +3,29 @@
   background-color: #000; /* Black background */
   color: #e0e0e0; /* Light text for contrast */
   position: fixed;
-  height: 100%; /* Ensure the container takes up the entire viewport height */
-  width: 100%;
+  height: 100vh; /* Ensure the container takes up the entire viewport height */
+  width: 100vw;
   display: flex;
   flex-direction: column; /* Align children vertically */
 }
 
+/* Navbar Placeholder */
+.navbar {
+  width: 100%;
+  height: 50px; /* Adjust height as necessary */
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex; /* Enable flexbox layout */
+  justify-content: flex-end; /* Align content to the right */
+  padding-right: 20px; /* Optional padding for spacing from the edge */
+}
+
 /* Title below the navbar */
 .displayPageHeader {
-  padding: 20px;
+  padding: 50px;
   color: #e0e0e0; /* Light gray for headers */
   text-align: center;
   margin-top: 100px; /* Adjust space below navbar */
@@ -35,6 +49,7 @@
   margin-bottom: 1rem;
   display: block;
   background-color: #000;
+  
 }
 
 /* Form Sections */
@@ -197,7 +212,6 @@ li {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin: auto;
 }
 
 .displayPageButton:disabled {
@@ -207,19 +221,24 @@ li {
 
 .displayPage {
   display: flex;
-  height: 100;
+  height: 100vh;
   flex-direction: column;
   background-color: #000;
+  
+
 }
 
 .displayPageContent {
   flex-grow: 1;
   padding-left: 350px;
-  background-color: #000;
-  width: 1133px;
-
+  background: linear-gradient(90deg, #000, #000);
+  width: 1142px;
+  
 }
 
 .inputElement {
   margin-left: 100px;
+}
+.back {
+  background: linear-gradient(90deg, #000, #000);
 }

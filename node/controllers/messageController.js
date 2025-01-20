@@ -6,11 +6,12 @@ const UserCount = require('../models/UserCount'); // Import UserCount model
 // Send a message
 exports.sendMessage = async (req, res) => {
     try {
-        const { sender, content } = req.body;
-        const newMessage = new Message({ sender, content });
+        const { sender_mail, sender, message } = req.body; // Matching with schema fields
+        const newMessage = new Message({ sender_mail, sender, message }); // Use fields from request
         await newMessage.save();
         res.status(201).json({ message: 'Message sent successfully' });
     } catch (error) {
+        console.error("Error sending message:", error);
         res.status(500).json({ error: 'Error sending message' });
     }
 };

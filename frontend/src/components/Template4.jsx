@@ -22,9 +22,7 @@ const Template4 = ({ formData = {} }) => {
             ProgrammingLanguages: ['JavaScript', 'Python', 'Java'],
             WebTechnologies: ['React', 'HTML', 'CSS'],
             ToolsandFrameworks: ['Git', 'Docker'],
-            Databases: ['MySQL', 'MongoDB'],
-            AreasOfInterest: ['Machine Learning', 'Cloud Computing'],
-            LeadershipQualities: ['Mentored junior developers', 'Led project teams in collaborative efforts']
+            Databases: ['MySQL', 'MongoDB']
         },
         Experience: [
             { Company: 'Tech Solutions', Role: 'Frontend Developer', Duration: '2021 - Present', Description: 'Developed user interfaces using React and Redux.' }
@@ -33,9 +31,10 @@ const Template4 = ({ formData = {} }) => {
             { Title: 'Weather App', Description: 'A weather forecasting app built with React and OpenWeather API.' }
         ],
         Certifications: ['AWS Certified Solutions Architect', 'Certified ScrumMaster'],
-        Languages: ['English', 'Tamil'],
+        Languages: ['English', 'Spanish'],
         Achievements: ['Employee of the Month - June 2022', 'Won First Place in Company Hackathon'],
-        
+        AreasOfInterest: ['Machine Learning', 'Cloud Computing'],
+        LeadershipQualities: ['Mentored junior developers', 'Led project teams in collaborative efforts']
     };
 
     const combinedData = { ...defaultData, ...formData };
@@ -159,8 +158,8 @@ const Template4 = ({ formData = {} }) => {
                     {renderSection('Certifications', combinedData.Certifications)}
                     {renderSection('Languages', combinedData.Languages)}
                     {renderSection('Achievements', combinedData.Achievements)}
-                    {renderSection('Skills', [{ 'Areas of Interest': safeJoin(combinedData.Skills.AreasOfInterest) },
-                    { 'Leadership Qualities': safeJoin(combinedData.Skills.LeadershipQualities) }])}
+                    {renderSection('Areas of Interest', combinedData.AreasOfInterest)}
+                    {renderSection('Leadership Qualities', combinedData.LeadershipQualities)}
                 </>
             );
         } else {

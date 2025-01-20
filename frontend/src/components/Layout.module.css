@@ -1,20 +1,20 @@
 /* Layout.module.css */
-
 .layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #000; /* Optional background color for the layout */
+    background-color: #000;
+     /* Optional background color for the layout */
+    
 }
 
 .navbar {
-    width: 100vw; /* Full viewport width */
+    width: 98.976%; /* Full viewport width */
     height: 50px;
     background: linear-gradient(90deg, #000, #000);
     padding: 15px 0;
     position: fixed;
     top: 0;
-    left: 0; /* Align to the left side */
     z-index: 1000;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
     transition: background 0.3s ease;
@@ -76,51 +76,4 @@
 .mainContent {
     flex: 1; /* Allow main content to take available space */
     padding: 20px; /* Padding for the main content */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        height: 60px; /* Slightly taller navbar for touch devices */
-        padding: 10px 0; /* Adjust padding */
-    }
-
-    .brand {
-        font-size: 1.5rem; /* Slightly smaller font size */
-        padding-left: 15px; /* Adjust left padding */
-    }
-
-    .navList {
-        gap: 20px; /* Reduce spacing between items */
-    }
-
-    .navList li {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column; /* Stack elements vertically */
-        height: auto; /* Adjust height to fit content */
-        padding: 10px; /* Add more padding */
-    }
-
-    .brand {
-        text-align: center; /* Center align brand */
-        padding: 10px 0; /* Add padding for spacing */
-    }
-
-    .navList {
-        flex-direction: column; /* Stack navigation items vertically */
-        gap: 10px; /* Adjust spacing */
-    }
-
-    .navList li {
-        font-size: 1rem; /* Slightly larger font size for readability */
-    }
-
-    .mainContent {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
 }

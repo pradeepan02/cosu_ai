@@ -1,32 +1,66 @@
-/* Messages.css */
+/* Messages Container */
 .messages {
-    padding: 20px; /* Padding around messages */
-    border-radius: 8px; /* Rounded corners */
-    width: 80%; /* Width of the messages container */
-    max-width: 600px; /* Max width */
-    text-align: left; /* Align text to left */
-    margin-bottom: 20px; /* Space below messages section */
+    background: linear-gradient(135deg, #2e2e2e, #333);
+    color: #f0f0f0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Header */
 .messages h2 {
-    margin-bottom: 15px; /* Space below heading */
+    color: #00bfff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
+/* List of messages */
 .messages ul {
-    list-style: none; /* Remove default list style */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    padding: 0;
 }
 
 .messages li {
-    background: #000; /* Dark background for each message */
-    color:#ffffff;
-    padding: 10px; /* Padding for each message */
-    margin: 10px 0; /* Margin between messages */
-    border-radius: 5px; /* Rounded corners for messages */
-    transition: background 0.3s ease; /* Smooth background transition */
-    color: aliceblue;
+    background: #444;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
+/* Hover effect for each message */
 .messages li:hover {
-    background: #000; /* Darker background on hover */
+    background: #555;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sender name styling */
+.messages li strong {
+    color: #00bfff;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .messages {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .messages h2 {
+        font-size: 1.5rem;
+    }
+
+    .messages li {
+        padding: 12px 15px;
+    }
 }

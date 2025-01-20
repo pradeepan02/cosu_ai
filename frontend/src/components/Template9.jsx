@@ -18,9 +18,7 @@ const Template9 = ({ formData = {} }) => {
             ProgrammingLanguages: ['Python', 'JavaScript', 'C++'],
             WebTechnologies: ['React', 'Angular', 'Node.js'],
             ToolsandFrameworks: ['Docker', 'Kubernetes', 'Jenkins'],
-            Databases: ['PostgreSQL', 'MongoDB'],
-            AreasOfInterest: ['AI and Machine Learning', 'Cybersecurity'],
-        LeadershipQualities: ['Mentored junior developers', 'Organized technical workshops']
+            Databases: ['PostgreSQL', 'MongoDB']
         },
         Experience: [
             {
@@ -38,10 +36,11 @@ const Template9 = ({ formData = {} }) => {
         Projects: [
             { ProjectName: 'Inventory Management System', Description: 'Developed an enterprise-level inventory system.' }
         ],
-        Languages: ['English', 'Tamil'],
+        Languages: ['English', 'French'],
         Hobbies: ['Photography', 'Traveling'],
         Achievements: ['Presented at international tech conferences', 'Published in industry journals'],
-        
+        AreasOfInterest: ['AI and Machine Learning', 'Cybersecurity'],
+        LeadershipQualities: ['Mentored junior developers', 'Organized technical workshops']
     };
 
     const combinedData = { ...defaultData, ...formData };
@@ -130,8 +129,8 @@ const Template9 = ({ formData = {} }) => {
                 {renderSection('Languages', combinedData.Languages)}
                 {renderSection('Hobbies', combinedData.Hobbies)}
                 {renderSection('Achievements', combinedData.Achievements)}
-                {renderSection('Skills', [{ 'Areas of Interest': safeJoin(combinedData.Skills.AreasOfInterest) },
-                { 'Leadership Qualities': safeJoin(combinedData.Skills.LeadershipQualities) }])}
+                {renderSection('Areas of Interest', combinedData.AreasOfInterest)}
+                {renderSection('Leadership Qualities', combinedData.LeadershipQualities)}
 
                 <button className="pdf-download-button" onClick={generatePDF}>Download as PDF</button>
             </div>

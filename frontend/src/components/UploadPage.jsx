@@ -25,7 +25,7 @@ function UploadPage({ setResumeData }) {
         setLoading(true);
 
         try {
-            const response = await axios.post('https://cosu-ai-flask.onrender.com/process', data, {
+            const response = await axios.post('http://localhost:7000/process', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

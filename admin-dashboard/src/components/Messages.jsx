@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Messages.css'; // Importing the CSS file
+import './Messages.css';
 
 const Messages = () => {
     const [messages, setMessages] = useState([]);
@@ -8,8 +8,8 @@ const Messages = () => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await axios.get('https://cosu-ai-backend.onrender.com/messages'); // Ensure this endpoint returns messages
-                setMessages(response.data); // Adjust according to your backend response structure
+                const response = await axios.get('http://localhost:8000/messages');
+                setMessages(response.data);
             } catch (error) {
                 console.error('Error fetching messages:', error);
             }

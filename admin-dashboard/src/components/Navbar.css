@@ -1,51 +1,95 @@
-/* Navbar.css */
+/* Navbar container */
 nav {
-    width: 100%; /* Full width */
-    background-color: #1a1a1a; /* Dark background for navbar */
-    padding: 10px 20px; /* Padding around navbar */
+    width: 100%;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
+/* Navbar title */
 nav h1 {
-    margin: 0; /* Remove default margin */
-    color: #00bfff; /* Bright blue for title */
+    color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
+/* Navbar links container */
 nav ul {
-    list-style: none; /* Remove list style */
-    display: flex; /* Flex layout for links */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
+/* Navbar list item */
 nav li {
-    margin: 0 15px; /* Space between links */
+    margin: 0 20px;
 }
 
+/* Navbar link styles */
 nav a {
-    color: #e0e0e0; /* Light text color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
+/* Hover effect for links */
 nav a:hover {
-    color: #00bfff; /* Bright blue on hover */
+    background-color: #00bfff;
+    color: #fff;
 }
 
-/* Responsive styles */
+/* Hamburger menu button for mobile */
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00bfff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack navbar items on smaller screens */
-        align-items: flex-start; /* Align items to start */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        margin-top: 15px;
+    }
+
+    nav ul.open {
+        display: flex; /* Display menu when open */
     }
 
     nav li {
-        margin: 5px 0; /* Adjust spacing for vertical layout */
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        text-align: left;
+    }
+
+    .menuToggle {
+        display: block;
     }
 }

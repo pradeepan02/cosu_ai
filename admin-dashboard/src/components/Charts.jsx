@@ -35,7 +35,7 @@ const Charts = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('https://cosu-ai-backend.onrender.com/user-count-history');
+                const response = await axios.get('http://localhost:8000/user-count-history');
                 const data = response.data.data;
 
                 // Extract dates and counts
@@ -64,9 +64,11 @@ const Charts = () => {
             {
                 label: 'Daily New Sign-ups',
                 data: userData.counts,
-                borderColor: '#00bfff',
-                backgroundColor: '#00bfff',
-                tension: 0.1,
+                borderColor: '#4c9aff',
+                backgroundColor: 'rgba(76, 154, 255, 0.5)',
+                tension: 0.3,
+                pointRadius: 5,
+                pointHoverRadius: 8,
                 fill: false,
             },
         ],
@@ -78,10 +80,12 @@ const Charts = () => {
             {
                 label: 'Cumulative Sign-ups',
                 data: userData.cumulativeCounts,
-                borderColor: '#3cb371',
-                backgroundColor: '#3cb371',
+                borderColor: '#34d399',
+                backgroundColor: 'rgba(52, 211, 153, 0.5)',
+                tension: 0.3,
+                pointRadius: 5,
+                pointHoverRadius: 8,
                 fill: false,
-                tension: 0.1,
             },
         ],
     };
@@ -92,47 +96,119 @@ const Charts = () => {
             {
                 label: 'Daily New Sign-ups (Bar)',
                 data: userData.counts,
-                backgroundColor: '#ff7f50',
+                backgroundColor: 'rgba(255, 127, 80, 0.8)',
+                hoverBackgroundColor: '#ff4500',
             },
         ],
     };
 
     const chartOptions = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 position: 'top',
             },
+            tooltip: {
+                enabled: true,
+                backgroundColor: '#fff',
+                titleColor: '#000',
+                bodyColor: '#000',
+                borderWidth: 1,
+                borderColor: '#ddd',
+            },
             title: {
                 display: true,
                 text: 'User Sign-ups Over Time',
+                font: {
+                    size: 18,
+                },
+            },
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#333',
+                },
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                ticks: {
+                    color: '#333',
+                },
+                grid: {
+                    color: '#e5e5e5',
+                },
             },
         },
     };
 
     return (
-        <div className="userStats">
-            <h2>User Growth Charts</h2>
-            
-            {/* Line Chart for Daily New Sign-ups */}
-            <div className="chartContainer">
-                <h3>Daily New Sign-ups (Line Chart)</h3>
-                <Line data={lineChartData} options={{ ...chartOptions, title: { text: 'Daily New Sign-ups' } }} />
-            </div>
+        <div className="userStats" style={styles.container}>
+            <h2 style={styles.title}>User Growth Charts</h2>
 
-            {/* Cumulative Sign-ups Line Chart */}
-            <div className="chartContainer">
-                <h3>Cumulative Sign-ups</h3>
-                <Line data={cumulativeChartData} options={{ ...chartOptions, title: { text: 'Cumulative Sign-ups' } }} />
-            </div>
+            <div style={styles.grid}>
+                {/* Line Chart for Daily New Sign-ups */}
+                <div style={styles.card}>
+                    <h3 style={styles.cardTitle}>Daily New Sign-ups (Line Chart)</h3>
+                    <div style={styles.chart}>
+                        <Line data={lineChartData} options={chartOptions} />
+                    </div>
+                </div>
 
-            {/* Bar Chart for Daily New Sign-ups */}
-            <div className="chartContainer">
-                <h3>Daily New Sign-ups (Bar Chart)</h3>
-                <Bar data={barChartData} options={{ ...chartOptions, title: { text: 'Daily New Sign-ups (Bar)' } }} />
+                {/* Cumulative Sign-ups Line Chart */}
+                <div style={styles.card}>
+                    <h3 style={styles.cardTitle}>Cumulative Sign-ups</h3>
+                    <div style={styles.chart}>
+                        <Line data={cumulativeChartData} options={chartOptions} />
+                    </div>
+                </div>
+
+                {/* Bar Chart for Daily New Sign-ups */}
+                <div style={styles.card}>
+                    <h3 style={styles.cardTitle}>Daily New Sign-ups (Bar Chart)</h3>
+                    <div style={styles.chart}>
+                        <Bar data={barChartData} options={chartOptions} />
+                    </div>
+                </div>
             </div>
         </div>
     );
+};
+
+const styles = {
+    container: {
+        padding: '20px',
+        fontFamily: '"Arial", sans-serif',
+    },
+    title: {
+        textAlign: 'center',
+        marginBottom: '20px',
+        fontSize: '24px',
+        
+    },
+    grid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '20px',
+    },
+    card: {
+        backgroundColor: '#fff',
+        borderRadius: '10px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        padding: '20px',
+        textAlign: 'center',
+    },
+    cardTitle: {
+        fontSize: '18px',
+        marginBottom: '15px',
+        color: '#555',
+    },
+    chart: {
+        height: '300px',
+    },
 };
 
 export default Charts;

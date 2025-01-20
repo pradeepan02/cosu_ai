@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './ContactPage.css'; // Import the regular CSS file
+import './ContactPage.css'; // Import the CSS file
 import Layout from './Layout';
 import { AuthContext } from './AuthContext';
 import AuthModal from './AuthModal';
@@ -12,7 +12,7 @@ function ContactPage() {
         message: ''
     });
     const [feedback, setFeedback] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false); 
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
@@ -29,7 +29,7 @@ function ContactPage() {
 
         if (isAuthenticated) {
             try {
-                const response = await fetch('https://cosu-ai-backend.onrender.com/send_message', {
+                const response = await fetch('http://localhost:8000/send_message', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ function ContactPage() {
 
     return (
         <Layout>
-            <div id="contactPage" className="pageContainer">
+            <div id="contactPage">
                 <h1>Contact Us</h1>
                 <p>If you have any questions, feel free to reach out!</p>
                 <form onSubmit={handleSubmit} className="contactForm">
@@ -69,7 +69,7 @@ function ContactPage() {
                         <label htmlFor="name">Name:</label>
                         <input
                             type="text"
-                            id="contact-name" // Changed from id="name" to id="contact-name"
+                            id="contact-name"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
@@ -80,7 +80,7 @@ function ContactPage() {
                         <label htmlFor="email">Email:</label>
                         <input
                             type="email"
-                            id="contact-email" // Changed from id="email" to id="contact-email"
+                            id="contact-email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
@@ -90,19 +90,17 @@ function ContactPage() {
                     <div className="formGroup">
                         <label htmlFor="message">Message:</label>
                         <textarea
-                            id="contact-message" // Changed from id="message" to id="contact-message"
+                            id="contact-message"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
                             required
                         />
                     </div>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" className="submitButton">Send Message</button>
                 </form>
-                {feedback && <p>{feedback}</p>} {/* Display feedback message */}
-                
-                {/* Authentication Modal */}
-                {isModalOpen && <AuthModal isOpen={isModalOpen} onClose={toggleModal} authMessage={authMessage} />} 
+                {feedback && <p className="feedback">{feedback}</p>}
+                {isModalOpen && <AuthModal isOpen={isModalOpen} onClose={toggleModal} authMessage={authMessage} />}
             </div>
         </Layout>
     );

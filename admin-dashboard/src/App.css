@@ -1,0 +1,47 @@
+/* Global reset and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General layout for the app */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Content container to provide spacing and margin */
+.contentContainer {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Full screen height */
+html, body {
+    height: 100%;
+}
+
+/* Ensure body takes the full height and the app content stretches */
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    /* Ensure padding and layout are adjusted for mobile */
+    .contentContainer {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    /* Adjust font size for smaller screens */
+    .contentContainer h1 {
+        font-size: 1.5rem;
+    }
+}
